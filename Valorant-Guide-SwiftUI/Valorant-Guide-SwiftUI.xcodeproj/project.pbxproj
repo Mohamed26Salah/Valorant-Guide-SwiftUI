@@ -8,22 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		AB2170E72A73F5BF006B901A /* Valorant_Guide_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2170E62A73F5BF006B901A /* Valorant_Guide_SwiftUIApp.swift */; };
-		AB2170E92A73F5BF006B901A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2170E82A73F5BF006B901A /* ContentView.swift */; };
 		AB2170EB2A73F5C0006B901A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2170EA2A73F5C0006B901A /* Assets.xcassets */; };
 		AB2170EE2A73F5C0006B901A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2170ED2A73F5C0006B901A /* Preview Assets.xcassets */; };
 		AB2170F82A74008F006B901A /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2170F72A74008F006B901A /* APIHandler.swift */; };
 		AB2170FD2A741E85006B901A /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2170FC2A741E85006B901A /* Test.swift */; };
+		AB2171012A751449006B901A /* AgentsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2171002A751449006B901A /* AgentsParser.swift */; };
+		AB2171042A751464006B901A /* OptionallyDecodable in Frameworks */ = {isa = PBXBuildFile; productRef = AB2171032A751464006B901A /* OptionallyDecodable */; };
+		AB2171062A751499006B901A /* BundlesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2171052A751499006B901A /* BundlesParser.swift */; };
+		AB2171082A7515B1006B901A /* MapsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2171072A7515B1006B901A /* MapsParser.swift */; };
+		AB21710A2A75165F006B901A /* SeasonsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2171092A75165F006B901A /* SeasonsParser.swift */; };
+		AB21710C2A75170D006B901A /* WeaponsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB21710B2A75170D006B901A /* WeaponsParser.swift */; };
+		AB2171102A751D1E006B901A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB21710F2A751D1E006B901A /* MainView.swift */; };
+		AB5293072A751F800095679B /* AgentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5293062A751F800095679B /* AgentViewModel.swift */; };
+		AB5293092A7546070095679B /* AgentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5293082A7546070095679B /* AgentsView.swift */; };
+		AB52930C2A754C010095679B /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AB52930B2A754C010095679B /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB2170E32A73F5BF006B901A /* Valorant-Guide-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Valorant-Guide-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB2170E62A73F5BF006B901A /* Valorant_Guide_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Valorant_Guide_SwiftUIApp.swift; sourceTree = "<group>"; };
-		AB2170E82A73F5BF006B901A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AB2170EA2A73F5C0006B901A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB2170ED2A73F5C0006B901A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AB2170F72A74008F006B901A /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		AB2170FB2A741E2F006B901A /* Empty.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Empty.md; sourceTree = "<group>"; };
 		AB2170FC2A741E85006B901A /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		AB2171002A751449006B901A /* AgentsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentsParser.swift; sourceTree = "<group>"; };
+		AB2171052A751499006B901A /* BundlesParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundlesParser.swift; sourceTree = "<group>"; };
+		AB2171072A7515B1006B901A /* MapsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsParser.swift; sourceTree = "<group>"; };
+		AB2171092A75165F006B901A /* SeasonsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonsParser.swift; sourceTree = "<group>"; };
+		AB21710B2A75170D006B901A /* WeaponsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsParser.swift; sourceTree = "<group>"; };
+		AB21710F2A751D1E006B901A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AB5293062A751F800095679B /* AgentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentViewModel.swift; sourceTree = "<group>"; };
+		AB5293082A7546070095679B /* AgentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB52930C2A754C010095679B /* SDWebImageSwiftUI in Frameworks */,
+				AB2171042A751464006B901A /* OptionallyDecodable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,14 +74,15 @@
 		AB2170E52A73F5BF006B901A /* Valorant-Guide-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				AB2170F52A73F5E5006B901A /* View */,
-				AB2170F62A73F5EE006B901A /* View Model */,
 				AB2170F42A73F5D0006B901A /* Model */,
+				AB2170F62A73F5EE006B901A /* View Model */,
+				AB2170F52A73F5E5006B901A /* View */,
 				AB2170E62A73F5BF006B901A /* Valorant_Guide_SwiftUIApp.swift */,
-				AB2170E82A73F5BF006B901A /* ContentView.swift */,
+				AB21710F2A751D1E006B901A /* MainView.swift */,
 				AB2170EA2A73F5C0006B901A /* Assets.xcassets */,
 				AB2170EC2A73F5C0006B901A /* Preview Content */,
 				AB2170FB2A741E2F006B901A /* Empty.md */,
+				AB2170FC2A741E85006B901A /* Test.swift */,
 			);
 			path = "Valorant-Guide-SwiftUI";
 			sourceTree = "<group>";
@@ -79,8 +98,8 @@
 		AB2170F42A73F5D0006B901A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AB2170F72A74008F006B901A /* APIHandler.swift */,
-				AB2170FC2A741E85006B901A /* Test.swift */,
+				AB2170FE2A751073006B901A /* APIHandler */,
+				AB2170FF2A7510A3006B901A /* Parser */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -88,6 +107,7 @@
 		AB2170F52A73F5E5006B901A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AB5293082A7546070095679B /* AgentsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -95,8 +115,29 @@
 		AB2170F62A73F5EE006B901A /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				AB5293062A751F800095679B /* AgentViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		AB2170FE2A751073006B901A /* APIHandler */ = {
+			isa = PBXGroup;
+			children = (
+				AB2170F72A74008F006B901A /* APIHandler.swift */,
+			);
+			path = APIHandler;
+			sourceTree = "<group>";
+		};
+		AB2170FF2A7510A3006B901A /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				AB2171002A751449006B901A /* AgentsParser.swift */,
+				AB2171052A751499006B901A /* BundlesParser.swift */,
+				AB2171072A7515B1006B901A /* MapsParser.swift */,
+				AB21710B2A75170D006B901A /* WeaponsParser.swift */,
+				AB2171092A75165F006B901A /* SeasonsParser.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +156,10 @@
 			dependencies = (
 			);
 			name = "Valorant-Guide-SwiftUI";
+			packageProductDependencies = (
+				AB2171032A751464006B901A /* OptionallyDecodable */,
+				AB52930B2A754C010095679B /* SDWebImageSwiftUI */,
+			);
 			productName = "Valorant-Guide-SwiftUI";
 			productReference = AB2170E32A73F5BF006B901A /* Valorant-Guide-SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -143,6 +188,10 @@
 				Base,
 			);
 			mainGroup = AB2170DA2A73F5BF006B901A;
+			packageReferences = (
+				AB2171022A751464006B901A /* XCRemoteSwiftPackageReference "OptionallyDecodable" */,
+				AB52930A2A754C010095679B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = AB2170E42A73F5BF006B901A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -169,10 +218,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2171062A751499006B901A /* BundlesParser.swift in Sources */,
+				AB2171102A751D1E006B901A /* MainView.swift in Sources */,
+				AB5293092A7546070095679B /* AgentsView.swift in Sources */,
 				AB2170F82A74008F006B901A /* APIHandler.swift in Sources */,
+				AB21710C2A75170D006B901A /* WeaponsParser.swift in Sources */,
+				AB5293072A751F800095679B /* AgentViewModel.swift in Sources */,
 				AB2170FD2A741E85006B901A /* Test.swift in Sources */,
-				AB2170E92A73F5BF006B901A /* ContentView.swift in Sources */,
+				AB2171012A751449006B901A /* AgentsParser.swift in Sources */,
+				AB2171082A7515B1006B901A /* MapsParser.swift in Sources */,
 				AB2170E72A73F5BF006B901A /* Valorant_Guide_SwiftUIApp.swift in Sources */,
+				AB21710A2A75165F006B901A /* SeasonsParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +429,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB2171022A751464006B901A /* XCRemoteSwiftPackageReference "OptionallyDecodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/idrougge/OptionallyDecodable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		AB52930A2A754C010095679B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB2171032A751464006B901A /* OptionallyDecodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB2171022A751464006B901A /* XCRemoteSwiftPackageReference "OptionallyDecodable" */;
+			productName = OptionallyDecodable;
+		};
+		AB52930B2A754C010095679B /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB52930A2A754C010095679B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB2170DB2A73F5BF006B901A /* Project object */;
 }
