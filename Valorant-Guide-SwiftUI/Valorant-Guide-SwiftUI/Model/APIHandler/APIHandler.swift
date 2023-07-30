@@ -21,18 +21,18 @@ enum URLHeads: String {
 }
 
 protocol APIProvider {
-    func fetchData(for resource: String, completion: @escaping (Result<Data, Error>) -> Void)
+    //-> Void // difference between escaping and non escaping // types of closure // this is a speific case of closure its type is Global.
+    func fetchData(for resource: String, completion: @escaping (Result<Data, Error>) -> ())
 }
 
-protocol ResponseParser {
-    associatedtype ParsedType: Decodable
-    func parse(_ data: Data) throws -> ParsedType
-}
+//protocol ResponseParser {
+//    associatedtype ParsedType: Decodable
+//    func parse(_ data: Data) throws -> ParsedType
+//}
 
 
 class NetworkAPIProvider: APIProvider {
     func fetchData(for resource: String, completion: @escaping (Result<Data, Error>) -> Void) {
-        print(resource)
         guard let apiURL = URL(string: resource) else {
             let customError = NSError(domain: "URL is Wrong", code: 0, userInfo: nil)
             completion(.failure(customError))
@@ -55,19 +55,19 @@ class NetworkAPIProvider: APIProvider {
         task.resume()
     }
 }
-
-class ResourceParser<T: Decodable>: ResponseParser {
-    typealias ParsedType = T
-    
-    func parse(_ data: Data) throws -> T {
-        do {
-            let decodedApi = try JSONDecoder().decode(T.self, from: data)
-            return decodedApi
-        } catch {
-            throw error
-        }
-    }
-}
+//
+//class ResourceParser<T: Decodable>: ResponseParser {
+//    typealias ParsedType = T
+//
+//    func parse(_ data: Data) throws -> T {
+//        do {
+//            let decodedApi = try JSONDecoder().decode(T.self, from: data)
+//            return decodedApi
+//        } catch {
+//            throw error
+//        }
+//    }
+//}
 
 class APIClient {
     private let baseURL: URL
@@ -77,14 +77,16 @@ class APIClient {
         self.baseURL = baseURL
         self.apiProvider = apiProvider
     }
-    
-    func fetchResourceData<T: Decodable, P: ResponseParser>(resource: String, parser: P, completion: @escaping (Result<T, Error>) -> Void) where P.ParsedType == T {
+    // ParseData
+    //at start we till we are generic, then we give generic type.
+    func fetchResourceData<model: Decodable>(modelDTO: model, resource: String, completion: @escaping (Result<model, Error>) -> Void){
         let resourceURL = baseURL.appendingPathComponent(resource)
         apiProvider.fetchData(for: resourceURL.absoluteString) { result in
             switch result {
             case .success(let data):
                 do {
-                    let parsedData = try parser.parse(data)
+                    let parsedData = try JSONDecoder().decode(model.self, from: data)
+    //                    let parsedData = try parser.parse(data)
                     completion(.success(parsedData))
                 } catch {
                     completion(.failure(error))
@@ -93,6 +95,25 @@ class APIClient {
                 completion(.failure(error))
             }
         }
-    }
+    }// RX swift(MVVM) /
+    
+    
 }
-
+//func fetchResourceData<T: Decodable, P: ResponseParser>(resource: String, parser: P, completion: @escaping (Result<T, Error>) -> Void) where P.ParsedType == T {
+//    let resourceURL = baseURL.appendingPathComponent(resource)
+//    apiProvider.fetchData(for: resourceURL.absoluteString) { result in
+//        switch result {
+//        case .success(let data):
+//            do {
+//                let parsedData = try JSONDecoder().decode(T.self, from: data)
+////                    let parsedData = try parser.parse(data)
+//                completion(.success(parsedData))
+//            } catch {
+//                completion(.failure(error))
+//            }
+//        case .failure(let error):
+//            completion(.failure(error))
+//        }
+//    }
+//}// RX swift(MVVM) /
+//

@@ -12,7 +12,9 @@ struct AgentsView: View {
     let agents: [AgentsDatum]
     var body: some View {
         List(agents, id: \.uuid) { agent in
-            AgentCellView(agent: agent)
+            if agent.isPlayableCharacter {
+                AgentCellView(agent: agent)
+            }
         }
         .listRowInsets(EdgeInsets())
   
@@ -23,7 +25,7 @@ struct AgentCellView: View {
     
     var body: some View {
         ZStack {
-            Color.black.opacity(0.7)
+            Color.red.opacity(0.8)
             WebImage(url: URL(string: agent.killfeedPortrait ))
                 .resizable()
                 .aspectRatio(contentMode: .fill)

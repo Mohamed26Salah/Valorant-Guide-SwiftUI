@@ -77,6 +77,11 @@ struct MainView: View {
             }
             .tint(Color.red)
             .navigationBarHidden(false)
+            .onAppear {
+                let tabBarAppearance = UITabBarAppearance()
+                tabBarAppearance.configureWithDefaultBackground()
+                UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+            }
         }
     }
 }
